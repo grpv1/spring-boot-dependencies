@@ -28,9 +28,9 @@ cache:
     - .m2/repository
 
 stages:
-  - build
-  - test
+  - build  
   - deploy
+  - test
   - release
 
 # For merge requests do not `deploy` but only run `verify`.
@@ -47,11 +47,6 @@ stages:
 verify:jdk8:
   <<: *verify
 
-integrtaion_test:jdk8:
-  stage: test
-  script:
-    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify'
-
 # To deploy packages from CI, create a ci_settings.xml file
 # For deploying packages to GitLab's Maven Repository: See https://docs.gitlab.com/ee/user/packages/maven_repository/index.html#create-maven-packages-with-gitlab-cicd for more details.
 # Please note: The GitLab Maven Repository is currently only available in GitLab Premium / Ultimate.
@@ -67,6 +62,13 @@ deploy:jdk8:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
+integrtaion_test:jdk8:
+  stage: test
+  script:
+    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify'
+  except:
+    variables:
+      - $CI_PIPELINE_SOURCE == merge_request_event
 
 release:jdk8:
   stage: release
@@ -78,6 +80,6 @@ release:jdk8:
     - 'git checkout -B ${CI_DEFAULT_BRANCH}; ls -la'
     - 'mvn $MAVEN_CLI_OPTS release:prepare -s ci_settings.xml'
     - 'mvn $MAVEN_CLI_OPTS release:perform -s ci_settings.xml'
-  only:
+  except:
     variables:
-      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      - $CI_PIPELINE_SOURCE == merge_request_event
