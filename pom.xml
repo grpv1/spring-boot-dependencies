@@ -4,7 +4,7 @@
 
     <groupId>com.poc.dws</groupId>
     <artifactId>dws-spring-boot-dependencies</artifactId>
-    <version>1.1.10-SNAPSHOT</version>
+    <version>1.1.10</version>
     <packaging>pom</packaging>
     
     <name>${project.artifactId}</name>
@@ -42,7 +42,7 @@
     <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
     <!--connection>scm:git:origin</connection-->
     <!--connection>scm:git:ssh://git@gitlab.com:natwestgroup/maven-helloworld.git</connection-->
-    <tag>HEAD</tag>
+    <tag>dws-spring-boot-dependencies-1.1.10</tag>
   </scm>
   
   <!--repositories>
