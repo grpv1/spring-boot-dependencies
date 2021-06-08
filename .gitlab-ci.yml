@@ -68,16 +68,16 @@ deploy:jdk8:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 
-#release:jdk8:
-#  stage: release
-#  script:
-#    - if [ ! -f ci_settings.xml ];
-#        then echo "[ ERROR ]:CI settings missing\!"; exit 1;
-#      fi ; 
-#    - 'git config user.name ${GITLAB_USER_NAME}; git config user.email ${GITLAB_USER_EMAIL}'
-#    - 'git checkout -B ${CI_DEFAULT_BRANCH}; ls -la'
-#    - 'mvn $MAVEN_CLI_OPTS release:prepare -s ci_settings.xml'
-#    - 'mvn $MAVEN_CLI_OPTS release:perform -s ci_settings.xml'
-#  only:
-#    variables:
-#      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+release:jdk8:
+  stage: release
+  script:
+    - if [ ! -f ci_settings.xml ];
+        then echo "[ ERROR ]:CI settings missing\!"; exit 1;
+      fi ; 
+    - 'git config user.name ${GITLAB_USER_NAME}; git config user.email ${GITLAB_USER_EMAIL}'
+    - 'git checkout -B ${CI_DEFAULT_BRANCH}; ls -la'
+    - 'mvn $MAVEN_CLI_OPTS release:prepare -s ci_settings.xml'
+    - 'mvn $MAVEN_CLI_OPTS release:perform -s ci_settings.xml'
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
