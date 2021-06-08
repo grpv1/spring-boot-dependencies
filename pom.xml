@@ -45,12 +45,6 @@
     <tag>HEAD</tag>
   </scm>
   
-  <!--repositories>
-    <repository>
-      <id>gitlab-maven</id>
-      <url>${gitlab.instance.mvn.endpoint}</url>
-    </repository>
-  </repositories-->
   <distributionManagement>
     <repository>
       <id>gitlab-maven</id>
