@@ -66,9 +66,9 @@ integrtaion_test:jdk8:
   stage: test
   script:
     - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify'
-  except:
-    variables:
-      - $CI_PIPELINE_SOURCE == merge_request_event
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
 
 release:jdk8:
   stage: release
@@ -80,6 +80,6 @@ release:jdk8:
     - 'git checkout -B ${CI_DEFAULT_BRANCH}; ls -la'
     - 'mvn $MAVEN_CLI_OPTS release:prepare -s ci_settings.xml'
     - 'mvn $MAVEN_CLI_OPTS release:perform -s ci_settings.xml'
-  except:
-    variables:
-      - $CI_PIPELINE_SOURCE == merge_request_event
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
