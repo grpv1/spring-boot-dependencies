@@ -115,8 +115,6 @@
           <version>${plugin.release.version}</version>
           <configuration>
                 <scmCommentPrefix>[ci skip] [maven-release-plugin]</scmCommentPrefix>
-                <!--username>${GITLAB_USER_LOGIN}</username>
-                <password>${GITLAB_PRIVATE_TOKEN}</password-->
           </configuration>
         </plugin>
         <plugin>
