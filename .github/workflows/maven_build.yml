@@ -9,7 +9,7 @@ on:
     branches:
       - '*'
       - '!main'
-      - '!master'
+      - 'master'
 #  pull_request:
 #    branches: [ main ]
 
