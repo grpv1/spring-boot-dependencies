@@ -25,5 +25,5 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Maven
+    - name: Build
       run: mvn -B clean install --file pom.xml -s ci_settings.xml
