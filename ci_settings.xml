@@ -14,7 +14,7 @@
       <id>github-maven</id>
       <!--username>${env.github_repository_owner}</username-->
       <username>${env.maven_access_user}</username>
-      <password>${{ secrets.GITHUB_TOKEN }}</password>
+      <password>${env.maven_access_token}</password>
     </server>
     <!--server>
       <id>gitlab</id>  
