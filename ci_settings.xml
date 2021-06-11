@@ -11,7 +11,7 @@
           
   <servers>
     <server>
-      <id>release</id>
+      <id>github-maven</id>
       <!--username>${env.github_repository_owner}</username-->
       <username>${env.github_access_user}</username>
       <password>${env.github_access_token}</password>
