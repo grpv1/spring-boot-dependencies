@@ -20,7 +20,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <commons-io.version>2.4</commons-io.version>
         <!-->MAVEN REPO URL FOR DISTRIBUTION MANAGEMENT<-->
-        <github.mvn.repo.url>https://maven.pkg.github.com/${env.github_repository_owner}/${env.github_repository_name}</github.mvn.repo.url>
+        <github.mvn.repo.url>https://maven.pkg.github.com/${GITHUB_REPOSITORY}</github.mvn.repo.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
