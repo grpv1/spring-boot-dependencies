@@ -15,7 +15,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Deploy with Maven
+    - name: Deploy
       run: mvn -B clean deploy -s ci_settings.xml
       env:
           github_repository_owner: ${{ github.repository_owner }} 
