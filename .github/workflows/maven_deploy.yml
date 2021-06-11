@@ -16,9 +16,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Deploy with Maven
-      run: |
-        echo "token:"
-        echo ${env.maven_access_token}
+      run: mvn -B clean deploy -s ci_settings.xml
       env:
           github_repository_owner: ${{ github.repository_owner }} 
           github_repository_name: ${{ github.event.repository.name }}
