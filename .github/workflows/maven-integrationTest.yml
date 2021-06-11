@@ -6,7 +6,7 @@ name: Java integration test with Maven
 on: workflow_dispatch
 
 jobs:
-  build:
+  integrationTest:
 
     runs-on: ubuntu-latest
 
