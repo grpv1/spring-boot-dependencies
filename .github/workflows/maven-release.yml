@@ -19,7 +19,8 @@ jobs:
         distribution: 'adopt'
     - name: Release
       run: |
-        echo "${maven_access} ${{ user.name }}"
+        echo "${maven_access}"
+        echo "${{ secrets.GITLAB_USER}}"
 #        git config user.name ${{ secrets.GITLAB_USER }}; git config user.email "vinod.kumar3@natwest.com"
 #        mvn -B release:prepare -s ci_settings.xml
 #        mvn -B release:perform -s ci_settings.xml
