@@ -26,7 +26,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <plugin.release.version>2.5.3</plugin.release.version>
         <plugin.scm.version>1.11.2</plugin.scm.version>        
-        <project.scm.id>gitlab</project.scm.id>
+        <!--project.scm.id>gitlab</project.scm.id-->
         <tomcat-embed-core.version>9.0.43</tomcat-embed-core.version>
     </properties>
     <dependencies>
@@ -38,10 +38,10 @@
     </dependency>
   </dependencies>
 
-  <!--scm>
-    <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
+  <scm>
+    <developerConnection>scm:git:origin</developerConnection>
     <tag>HEAD</tag>
-  </scm-->
+  </scm>
   
   <distributionManagement>
    <repository>
