@@ -39,7 +39,7 @@
   </dependencies>
 
   <scm>
-    <developerConnection>scm:git:origin</developerConnection>
+    <developerConnection>scm:git:${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   
