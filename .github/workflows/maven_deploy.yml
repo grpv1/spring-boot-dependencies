@@ -18,4 +18,4 @@ jobs:
           github_repository_owner: ${{ github.repository_owner }} 
           github_repository_name: ${{ github.event.repository.name }}
           github_access_user: ${{ secrets.MAVEN_DEPLOY_USER }}
-          github_access_token: ${{ secrets.MAVEN_DEPLOY_TOKEN }}
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
