@@ -38,23 +38,22 @@
     </dependency>
   </dependencies>
 
-  <scm>
+  <!--scm>
     <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
-    <!--connection>scm:git:origin</connection-->
-    <!--connection>scm:git:ssh://git@gitlab.com:natwestgroup/maven-helloworld.git</connection-->
     <tag>HEAD</tag>
-  </scm>
+  </scm-->
   
   <distributionManagement>
-    <repository>
-      <id>gitlab-maven</id>
-      <url>${gitlab.mvn.repo.url}</url>
-    </repository>
-    <snapshotRepository>
-      <id>gitlab-maven</id>
-      <url>${gitlab.mvn.repo.url}</url>
-    </snapshotRepository>
-  </distributionManagement>
+   <repository>
+     <id>github-maven</id>
+     <name>GitHub Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/${env.github_repository_owner}/${env.github_repository_name}</url>
+   </repository>
+   <snapshotRepository>
+      <id>github-maven</id>
+      <url>https://maven.pkg.github.com/${env.github_repository_owner}/${env.github_repository_name}</url>
+   </snapshotRepository>
+</distributionManagement>
 
   <dependencyManagement>
     <dependencies>
