@@ -20,5 +20,5 @@ jobs:
       env:
           github_repository_owner: ${{ github.repository_owner }} 
           github_repository_name: ${{ github.event.repository.name }}
-          maven_access_user: ${{ secrets.MAVEN_DEPLOY_USER }}
+          maven_access_user: ${{ secrets.GITLAB_USER }}
           maven_access_token: ${{ secrets.GITHUB_TOKEN }}
