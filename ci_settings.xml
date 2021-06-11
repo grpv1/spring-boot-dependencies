@@ -16,11 +16,11 @@
       <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
-    <!--server>
-      <id>gitlab</id>  
-      <username>${GITLAB_USER_LOGIN}</username>  
-      <password>${GITLAB_MAVEN_PRIVATE_TOKEN}</password>  
-    </server-->
+    <server>
+      <id>github</id>  
+      <username>${env.maven_access_user}</username>  
+      <password>${env.maven_access_token}</password>  
+    </server>
   </servers>
 
   <mirrors>
