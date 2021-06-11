@@ -17,9 +17,9 @@ jobs:
         distribution: 'adopt'
     - name: Deploy with Maven
       run: |
-        - mvn deploy -B -s ci_settings.xml
-        - cat ci_settings.xml
-        - echo ${env.maven_access_token}
+        mvn deploy -B -s ci_settings.xml
+        cat ci_settings.xml
+        echo ${env.maven_access_token}
       env:
           github_repository_owner: ${{ github.repository_owner }} 
           github_repository_name: ${{ github.event.repository.name }}
