@@ -47,7 +47,7 @@
    <repository>
      <id>github-maven</id>
      <name>GitHub Apache Maven Packages</name>
-     <url>${gitlab.mvn.repo.url}</url>
+     <url>${github.mvn.repo.url}</url>
    </repository>
    <snapshotRepository>
       <id>github-maven</id>
