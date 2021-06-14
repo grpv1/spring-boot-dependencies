@@ -9,16 +9,17 @@
   <proxies>
   </proxies>
           
-  <servers>
+  <servers>            
+    <!-- for distribution management -->
     <server>
       <id>github-maven</id>
       <!--username>${env.github_repository_owner}</username-->
       <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
+    <!-- for scm operations by release plugin -->
     <server>
       <id>github</id>
-      <!-- for scm operations by release plugin -->
       <password>${env.maven_access_token}</password>  
     </server>
   </servers>
