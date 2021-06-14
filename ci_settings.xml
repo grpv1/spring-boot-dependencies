@@ -17,8 +17,7 @@
       <password>${env.maven_access_token}</password>
     </server>
     <server>
-      <id>github</id>  
-      <username>${env.maven_access_user}</username>  
+      <id>github</id> 
       <password>${env.maven_access_token}</password>  
     </server>
   </servers>
