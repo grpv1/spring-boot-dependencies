@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.poc.dws</groupId>
-    <artifactId>dws-spring-boot-dependencies</artifactId>
-    <version>1.1.22-SNAPSHOT</version>
+    <groupId>com.poc.grpv1</groupId>
+    <artifactId>grpv1-spring-boot-dependencies</artifactId>
+    <version>1.1.20-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>${project.artifactId}</name>
-    <description>DWS Spring Boot Dependencies</description>
+    <description>GRPV1 Spring Boot Dependencies</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
